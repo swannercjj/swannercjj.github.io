@@ -1,0 +1,78 @@
+@import "../../vars.css";
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    z-index: 2;
+    margin: 0 10%;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.menuItems a {
+    font-size: 20px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        z-index: 3;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuItems {
+        /* display: none; */
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        border-radius: 10px;
+        background: var(--color-accent);
+
+        background: linear-gradient(
+            0deg,
+            var(--color-bg) 0%,
+            var(--color-accent) 100%
+        );
+        padding: 24px 32px;
+        box-shadow: 0 0 4px 0 rbga(0, 0, 0, 0.25);
+    }
+
+    .menuOpen {
+        display: flex;
+        z-index: 1;
+    }
+}
