@@ -8,6 +8,8 @@
     padding-top: 60px;
     z-index: 2;
     margin: 0 10%;
+    padding: 0 auto;
+    max-width: 1680px;
 }
 
 .title {
@@ -33,13 +35,16 @@
 
 .menuItems a {
     font-size: 24px;
-    color: var(--color-text);
+    color: var(--color-white);
     text-decoration: none;
 }
 
-.menuItems a:hover {
-    color: var(--color-secondary);
-}
+a:hover {
+    text-shadow:
+      0 0 5px var(--color-secondary),
+      0 0 10px var(--color-secondary),
+      0 0 15px var(--color-secondary);
+  }
 
 @media screen and (max-width: 830px) {
     .navbar {
@@ -70,7 +75,12 @@
         align-items: center;
         gap: 12px;
         border-radius: 10px;
-        background: rgb(25, 55, 109);
+        background: rgb(36, 49, 105);
+        background: linear-gradient(
+            0deg,
+            rgba(36, 49, 105, 0.2) 20%,
+            rgba(36, 49, 105, 1) 100%
+        );
         padding: 12px 18px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     }
