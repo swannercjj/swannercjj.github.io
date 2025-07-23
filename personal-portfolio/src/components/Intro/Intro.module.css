@@ -56,11 +56,38 @@
     z-index: 1;
 }
 
+.links {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.links a {
+    font-size: 24px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.links li {
+    position: relative;
+}
+
+.links li::after {
+    content: "/";
+    position: relative;
+    right: -25px;
+    color: var(--color-text);
+    font-size: 24px;
+}
+
+.links li:last-child::after {
+    content: none;
+}
+
 
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column-reverse;
-        /* margin: ; */
     }
 
     .content {
