@@ -23,24 +23,11 @@
     font-weight: 900;
     margin-bottom: 32px;
     font-family: var(--font-roboto);
-    background-image: 
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 1) 20%,
-            rgba(255, 255, 255, 0.6) 70%
-        );
-
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
     transition: text-shadow 0.2s ease;
+    display: inline-block;
 }
 
 .title:hover {
-    -webkit-text-fill-color: var(--color-text); 
-    background-image: none;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
     text-shadow:
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
@@ -69,37 +56,11 @@
     z-index: 1;
 }
 
-.topBlur {
-    position:absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 350px;
-    top: -128px;
-    left: -10vw;
-    border-radius: 764px;
-    background-color: rgba(57, 78, 171, 0.4);
-    filter: blur(120px);
-    z-index: 0;
-}
-
-.botBlur {
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 250px;
-    top: 10px;
-    left: 30vw;
-    border-radius: 600px;
-    background-color: rgba(57, 78, 171, 0.4);
-    filter: blur(120px);
-    z-index: 0;
-}
 
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column-reverse;
+        /* margin: ; */
     }
 
     .content {
@@ -108,11 +69,8 @@
 
     .title {
         font-size: 48px;
-        margin-top: 16px;
-        -webkit-text-fill-color: var(--color-text); 
-        background-image: none;
-        -webkit-background-clip: border-box;
-        background-clip: border-box;
+        margin: 16px 0;
+        text-align: center;
     }
 
     .profileImg {
@@ -124,21 +82,9 @@
     .description {
         font-size: 24px;
         font-family: var(--font-roboto);
-        margin-bottom: 52px;
-        margin-right: 48px;
-        max-width: 1048px;
+        margin: 0;
+        text-align: center;
     }
 
-    .topBlur {
-        height: 100vw;
-        top: 196px;
-        background-color: rgba(57, 78, 171, 0.6);
-    }
-
-    .botBlur {
-        top: 600px;
-        height: 100vw;
-        background-color: rgba(57, 78, 171, 0.8);
-    }
 }
 

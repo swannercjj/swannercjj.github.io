@@ -13,8 +13,6 @@ export const Intro = () => {
             {/* cv/resume, github, linkedin, email */}
         </div>
           <img src={getImageUrl("intro/profile_img.jpg")} alt="professional photo" className={styles.profileImg}/>
-        <div className={styles.topBlur} ></div>
-        <div className={styles.botBlur} ></div>
     </section>
   );
 };
