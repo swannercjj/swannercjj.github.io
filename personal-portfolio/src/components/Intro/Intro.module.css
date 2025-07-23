@@ -109,8 +109,21 @@
     .description {
         font-size: 24px;
         font-family: var(--font-roboto);
-        margin: 0;
+        margin: 0 0 12px 0;
         text-align: center;
+    }
+
+    .links {
+        gap: 10px;
+    }
+
+    .links a {
+        font-size: 18px;
+    }
+
+    .links li::after {
+        font-size: 18px;
+        right: -6px;
     }
 
 }
