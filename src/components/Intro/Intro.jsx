@@ -9,7 +9,7 @@ export const Intro = () => {
     <section className={styles.container}>
         <div className={styles.content}>
             <h1 className={styles.title}>Hey, I'm Jessica!</h1>
-            <p className={styles.description}>I am computer science student at the University of Toronto passionate about machine learning, game development, and computer graphics.</p>
+            <p className={styles.description}>I am a computer science student at the University of Toronto passionate about machine learning, game development, and computer graphics.</p>
             <ul className={styles.links}>
               <li>
                 <a href="mailto:jiajing.chen@mail.utoronto.ca">Email</a>
