@@ -63,11 +63,16 @@
 @media screen and (max-width: 830px) {
     .container {
         background-color: transparent;
-        padding: 36px;
+        padding: 16px;
+        text-align: center;
     }
 
     .content {
         flex-direction: column;
+    }
+
+    .title {
+        font-size: 36px;
     }
 
     .aboutImg {
@@ -75,7 +80,14 @@
     }
 
     .aboutList {
-        margin-top: 28px;
+        margin-top: 16px;
+        text-align: left;
+        gap: 16px;
+    }
+
+    .aboutItem {
+        padding: 4px;
+        font-size: 16px;
     }
 
 }
