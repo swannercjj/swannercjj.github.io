@@ -1,9 +1,8 @@
 import React from 'react'
 
 import styles from "./Intro.module.css"
-import { getImageUrl } from '../../utils';
 import resume from "../../resources/jiajing_chen_resume.pdf"
-
+import profileImg from "../../resources/intro/profile_img.jpg"
 
 export const Intro = () => {
   return (
@@ -27,7 +26,7 @@ export const Intro = () => {
             </ul>
             {/* cv/resume, github, linkedin, email */}
         </div>
-          <img src={getImageUrl("intro/profile_img.jpg")} alt="professional photo" className={styles.profileImg}/>
+          <img src={profileImg} alt="professional photo" className={styles.profileImg}/>
     </section>
   );
 };
