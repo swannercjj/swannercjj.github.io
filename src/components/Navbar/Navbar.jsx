@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
-import menuIcon from "../../resources/nav/menu_icon.png"
-import menuClose from "../../resources/nav/menu_close.png"
+import menuIcon from "../../assets/nav/menu_icon.png"
+import menuClose from "../../assets/nav/menu_close.png"
 
 
 export const Navbar = () => {

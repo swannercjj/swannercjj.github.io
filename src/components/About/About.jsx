@@ -1,7 +1,6 @@
 import React from 'react'
-import { getImageUrl } from '../../utils';
 import styles from "./About.module.css"
-import cherryBlossoms from "../../resources/about/img.png"
+import cherryBlossoms from "../../assets/about/img.png"
 
 export const About = () => {
   return (

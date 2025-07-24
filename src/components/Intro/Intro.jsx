@@ -1,8 +1,8 @@
 import React from 'react'
 
 import styles from "./Intro.module.css"
-import resume from "../../resources/jiajing_chen_resume.pdf"
-import profileImg from "../../resources/intro/profile_img.jpg"
+// import resume from "../../../public/jiajing_chen_resume.pdf"
+import profileImg from "../../assets/intro/profile_img.jpg"
 
 export const Intro = () => {
   return (
@@ -15,7 +15,7 @@ export const Intro = () => {
                 <a href="mailto:jiajing.chen@mail.utoronto.ca">Email</a>
               </li>
               <li>
-                <a href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href={"/jiajing_chen_resume.pdf"} target="_blank" rel="noopener noreferrer">Resume</a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/jessicachen-cjj/" target="_blank">LinkedIn</a>
@@ -24,7 +24,6 @@ export const Intro = () => {
                 <a href="https://github.com/swannercjj" target="_blank">GitHub</a>
               </li>
             </ul>
-            {/* cv/resume, github, linkedin, email */}
         </div>
           <img src={profileImg} alt="professional photo" className={styles.profileImg}/>
     </section>
