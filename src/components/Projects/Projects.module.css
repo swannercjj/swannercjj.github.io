@@ -1,0 +1,51 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    border-radius: 32px;
+    padding: 72px;
+    margin: 48px 12%;
+    z-index: 1;
+    color: var(--color-text);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    transition: text-shadow 0.2s ease;
+    display: inline-block;
+}
+
+.title:hover {
+    text-shadow:
+      0 0 5px var(--color-secondary),
+      0 0 10px var(--color-secondary),
+      0 0 15px var(--color-secondary); 
+}
+
+
+.projects {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 830px) {
+    .container {
+        margin: 48px 8%;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}
