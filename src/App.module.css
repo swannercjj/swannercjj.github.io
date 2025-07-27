@@ -6,6 +6,7 @@
     width: 100%;
     min-height: 100dvh;
     padding: 16px 0;
+    overflow: hidden;
 }
 
 .backgroundBlur {
@@ -14,7 +15,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 80%;
+    height: 90%;
     border-radius: 240px;
     background-color: rgba(57, 78, 171, 0.4);
     filter: blur(200px);
