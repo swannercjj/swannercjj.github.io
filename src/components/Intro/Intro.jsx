@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styles from "./Intro.module.css"
-// import resume from "../../../public/jiajing_chen_resume.pdf"
 import profileImg from "../../assets/intro/profile_img.jpg"
 
 export const Intro = () => {

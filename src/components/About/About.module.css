@@ -30,7 +30,7 @@
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
       0 0 15px var(--color-secondary); 
-  }
+}
 
 .content {
     display: flex;
@@ -63,6 +63,7 @@
 @media screen and (max-width: 830px) {
     .container {
         background-color: transparent;
+        margin: 48px 8%;
         padding: 16px;
         text-align: center;
     }
