@@ -93,3 +93,12 @@
 
 }
 
+@media (min-width: 1024px) {
+    .container {
+        margin: 128px 16% 48px 16%;
+    }
+
+    .aboutItem {
+    font-size: 24px;
+    }
+}

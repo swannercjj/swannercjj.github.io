@@ -49,3 +49,10 @@
         font-size: 36px;
     }
 }
+
+@media (min-width: 1024px) {
+    .container {
+        margin: 128px 16% 48px 16%;
+    }
+}
+

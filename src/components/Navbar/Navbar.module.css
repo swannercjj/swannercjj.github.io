@@ -20,7 +20,7 @@
 
 .menuBtn {
     display: none;
-  }
+}
 
 .menu {
     display: flex;
@@ -43,7 +43,7 @@ a:hover {
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
       0 0 15px var(--color-secondary);
-  }
+}
 
 @media screen and (max-width: 830px) {
     .navbar {
@@ -54,7 +54,6 @@ a:hover {
     .menu {
         position: absolute;
         right: 0;
-        margin-right: 10%;
         flex-direction: column;
         align-items: flex-end;
         gap: 10px;
@@ -74,11 +73,11 @@ a:hover {
         align-items: center;
         gap: 12px;
         border-radius: 10px;
-        background: rgb(36, 49, 105);
+        background: rgb(36, 38, 105);
         background: linear-gradient(
             0deg,
-            rgba(36, 49, 105, 0.2) 20%,
-            rgba(36, 49, 105, 1) 100%
+            rgba(36, 38, 105, 0.8) 20%,
+            rgba(36, 38, 105, 0.2) 100%
         );
         padding: 12px 18px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);

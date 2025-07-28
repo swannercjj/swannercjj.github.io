@@ -1,0 +1,45 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    margin: 0 12% 48px 12%;
+}
+
+.linksList {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.linkItem {
+    font-size: 40px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: font-size 0.2s ease;
+}
+.linkItem:hover {
+    font-size: 48px;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+    .linksList {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+    }
+    .linkItem:hover {
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin: 0px 16% 48px 16%;
+    }
+}
