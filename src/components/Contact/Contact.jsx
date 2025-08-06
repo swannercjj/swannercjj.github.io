@@ -33,7 +33,7 @@ export const Contact = () => {
       <div className={styles.container}>
         <ul className={styles.linksList}>
             {links.map((link, index) => (
-              <li>
+              <li key={link.name}>
                 <a 
                   className={styles.linkItem}
                   key={index}
