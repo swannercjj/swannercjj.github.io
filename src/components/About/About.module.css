@@ -56,7 +56,7 @@
 
 .aboutItem {
     padding: 10px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 830px) {
@@ -87,7 +87,6 @@
 
     .aboutItem {
         padding: 4px;
-        font-size: 16px;
     }
 
 }
@@ -97,7 +96,7 @@
         margin: 128px 16% 48px 16%;
     }
 
-    .aboutItem {
-    font-size: 32px;
+    .aboutImg {
+        display: none;
     }
 }
