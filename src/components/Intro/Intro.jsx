@@ -14,7 +14,7 @@ export const Intro = () => {
                 <a href="mailto:jiajing.chen@mail.utoronto.ca">Email</a>
               </li>
               <li>
-                <a href={"/jiajing_chen_resume.pdf"} target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href={"/jessica_chen_resume.pdf"} target="_blank" rel="noopener noreferrer">Resume</a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/jessicachen-cjj/" target="_blank">LinkedIn</a>
