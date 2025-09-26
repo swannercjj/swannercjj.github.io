@@ -11,7 +11,7 @@ export const Intro = () => {
             <p className={styles.description}>I am a computer science student at the University of Toronto passionate about machine learning, game development, and computer graphics.</p>
             <ul className={styles.links}>
               <li>
-                <a href="mailto:jiajing.chen@mail.utoronto.ca">Email</a>
+                <a href="mailto:jesschen.cjj@gmail.com">Email</a>
               </li>
               <li>
                 <a href={"/jessica_chen_resume.pdf"} target="_blank" rel="noopener noreferrer">Resume</a>

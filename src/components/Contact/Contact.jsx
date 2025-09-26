@@ -18,7 +18,7 @@ export const Contact = () => {
     },
     {
       name: "Email",
-      href: "mailto:jiajing.chen@mail.utoronto.ca",
+      href: "mailto:jesschen.cjj@gmail.com",
       icon: <IoMail />
     },
     {
