@@ -11,11 +11,11 @@ export const Experience = () => {
             <VerticalTimelineElement
                 className={styles.timelineElement}
                 iconStyle={{ background: "#fff", color: "#fff" }}
-                date="May 2025 - present"
+                date="May 2025 - Aug 2025"
             >
                 <h3 className="vertical-timeline-element-title">AI Engineer</h3>
                 <h4 className="vertical-timeline-element-subtitle">RBC Capital Markets</h4>
-                <p>Apply machine learning techniques to address real-world stock market trading</p>
+                <p>Applied machine learning for predictive modeling in stock market applications</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className={styles.timelineElement}

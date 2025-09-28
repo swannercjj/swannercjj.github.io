@@ -40,7 +40,7 @@
 
 .aboutImg {
     width: 480px;
-    max-width: 24vw;
+    max-width: 18rem;
     height: auto;
     margin-top: 16px;
     margin-right: 32px;
@@ -55,8 +55,8 @@
 }
 
 .aboutItem {
-    padding: 10px;
-    font-size: 1.4rem;
+    padding: 1rem;
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 830px) {
@@ -87,7 +87,6 @@
 
     .aboutItem {
         padding: 4px;
-        font-size: 1rem;
     }
 
 }
@@ -97,6 +96,6 @@
         margin: 128px 16% 48px 16%;
     }
     .aboutItem {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
