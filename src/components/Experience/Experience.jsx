@@ -33,7 +33,7 @@ export const Experience = () => {
             >
                 <h3 className="vertical-timeline-element-title">Undergraduate Research Assistant</h3>
                 <h4 className="vertical-timeline-element-subtitle">University of Alberta</h4>
-                <p>Explored how deep reinforcement learning agents can learn to optimize compute</p>
+                <p>Explored how deep reinforcement learning agents can learn to optimize compute, papper submission to ICLR 2026</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className={styles.timelineElement}
