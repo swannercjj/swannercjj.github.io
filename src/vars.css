@@ -6,7 +6,7 @@
     --color-accent: rgb(61, 57, 171);
     --color-bg: rgb(200, 212, 234);
     --color-dark-text: rgb(52, 53, 58);
-
+    --color-text-secondary: rgb(247, 241, 255);
     /* Fonts */
     --font-robot: "Roboto";
 }

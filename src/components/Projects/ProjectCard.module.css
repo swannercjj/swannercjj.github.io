@@ -1,75 +1,124 @@
 @import "../../vars.css";
 
-
+/* each project row */
 .container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    padding: 1.2rem 1.5rem;
-    background-image: 
-    linear-gradient(
-        135deg,
-        rgba(61, 57, 171, 0.2) 20%,
-        rgba(61, 57, 171, 0.4) 70%
-    );
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-    width: 22rem;
-    height: 24rem;
-    text-decoration: none;
-    color: inherit; 
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  width: 100%;
 }
 
-.container:hover {
-    cursor: pointer;
-    transform: scale(1.03); 
+.container:last-child {
+  border-bottom: none; 
+}
+
+/* header layout: content left, arrow right */
+.header {
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
 }
 
 .image {
-    width: auto;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 0.6rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  /* align-self: flex-start; */
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
 }
 
 .title {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.title a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: text-shadow 0.2s ease;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
 }
 
 .description {
-    margin-top: 4px;
-    font-size: 1.25rem;
-    font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
-@media screen and (max-width: 830px) {
-    .container {
-        text-align: left;
-        width: auto;
-        height: auto;
-        max-width: 300px;
-    }
+.icon {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  transition: transform 0.25s ease;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
 
-    .image {
-        height: 240px;
-        margin-bottom: 16px;
-    }
+.rotate {
+  transform: rotate(180deg);
+}
 
-    .title {
-        font-size: 1rem;
-    }
+/* accordion animation */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
 
-    .description {
-        font-size: 0.75rem;
-    }
+.open {
+  max-height: 100%;
+  opacity: 1;
+}
+
+.panelContent {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.details {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.link {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .headerLeft {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .panelContent {
+    margin-left: 0;
+  }
 }
