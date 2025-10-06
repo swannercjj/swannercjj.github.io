@@ -105,6 +105,16 @@
   font-weight: 600;
   color: var(--color-accent);
   text-decoration: none;
+  transition: text-shadow 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  text-shadow:
+    0 0 5px var(--color-secondary),
+    0 0 10px var(--color-secondary),
+    0 0 15px var(--color-secondary);
+  color: var(--color-text);
 }
 
 /* responsive */
