@@ -57,7 +57,7 @@ export const Projects = () => {
             <div className={styles.projects}>
                 {
                     projects.map((project, id) => {
-                        return <ProjectCard key={id} project={project}/>
+                        return <ProjectCard key={id} project={project} defaultOpen={id < 2}/>
                     })
                 }
             </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "./ProjectCard.module.css";
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project, defaultOpen = false }) => {
   const { title, image, description, link, details } = project;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
     <div className={styles.container}>
