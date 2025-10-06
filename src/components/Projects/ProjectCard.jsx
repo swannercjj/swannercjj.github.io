@@ -13,7 +13,6 @@ export const ProjectCard = ({ project, defaultOpen = false }) => {
         aria-expanded={isOpen}
       >
         <div className={styles.headerLeft}>
-          <img src={image} alt={title} className={styles.image} />
           <div className={styles.textBlock}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.description}>{description}</p>
@@ -26,11 +25,9 @@ export const ProjectCard = ({ project, defaultOpen = false }) => {
 
       <div className={`${styles.panel} ${isOpen ? styles.open : ""}`}>
         <div className={styles.panelContent}>
-          {details && details.map((paragraph, i) => (
-              <p key={i} className={styles.details}>
-                {paragraph}
-              </p>
-            ))}
+          {image && (
+            <img src={image} alt={title} className={styles.image} />
+          )}
           {link && (
             <a
               href={link}
@@ -38,9 +35,14 @@ export const ProjectCard = ({ project, defaultOpen = false }) => {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              View Project →
+              View Project
             </a>
           )}
+          {details && details.map((paragraph, i) => (
+            <p key={i} className={styles.details}>
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </div>
