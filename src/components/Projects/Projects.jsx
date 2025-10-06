@@ -16,6 +16,7 @@ export const Projects = () => {
             "title": "Fitting In",
             "image": FittingInImg,
             "description": "Multiplayer game where tiny ailens need to pilot a \"human\" spaceship as a disguise.",
+            "details": ["This a test.", "test2"],
             "link": "https://tycelm.itch.io/fitting-in"
         },
         {

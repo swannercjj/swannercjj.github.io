@@ -1,138 +1,119 @@
 @import "../../vars.css";
 
-
+/* each project row */
 .container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    padding: 1.2rem 1.5rem;
-    background-image: 
-    linear-gradient(
-        135deg,
-        rgba(61, 57, 171, 0.2) 20%,
-        rgba(61, 57, 171, 0.4) 70%
-    );
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-    width: 22rem;
-    height: 24rem;
-    text-decoration: none;
-    color: inherit; 
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 0;
+  width: 100%;
 }
 
-.container:hover {
-    cursor: pointer;
-    transform: scale(1.03); 
+/* header layout: content left, arrow right */
+.header {
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
 }
 
 .image {
-    width: auto;
-    max-height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 0.6rem;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
 }
 
 .title {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.title a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: text-shadow 0.2s ease;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
 }
 
 .description {
-    margin-top: 4px;
-    font-size: 1.25rem;
-    font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
 }
 
+.icon {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  transition: transform 0.25s ease;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
 
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* accordion animation */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.panelContent {
+  margin-top: 1rem;
+  margin-left: calc(80px + 1rem);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-
-  opacity: 0;
-  animation: fadeIn 0.3s forwards;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
 }
 
-.modalContent {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  max-width: 80vw;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-
-  transform: scale(0.9);
-  opacity: 0;
-  animation: popIn 0.3s forwards;
+.details {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.5;
 }
 
-/* Close button in top-right corner */
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  transition: color 0.2s ease;
-}
-.closeButton:hover {
-  color: #c00;
+.link {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+/* responsive */
+@media screen and (max-width: 600px) {
+  .headerLeft {
+  flex-direction: column;
   }
-}
 
-@keyframes popIn {
-  to {
-    transform: scale(1);
-    opacity: 1;
+  .image {
+  width: 100%;
+  height: auto;
   }
-}
 
-@media screen and (max-width: 830px) {
-    .container {
-        text-align: left;
-        width: auto;
-        height: auto;
-        max-width: 300px;
-    }
-
-    .image {
-        height: 240px;
-        margin-bottom: 16px;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.75rem;
-    }
+  .panelContent {
+  margin-left: 0;
+  }
 }
