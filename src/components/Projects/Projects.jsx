@@ -28,8 +28,7 @@ export const Projects = () => {
             "image": PaperPlateParanoiaImg,
             "description": "Bullet hell game where paper plate must collect friends and escape the diner.",
             "link": "https://jason121301.itch.io/paper-plate-paranoia",
-            "details": ["This is the first game I built! I participated in the 2024 utGDDC Fall Game Jam where the theme was \"one-time use\". When brainstorming ideas, my team of 4 focused on working that theme into our main character, a disposable paper plate.",
-                "A bullet hell game seemed fitting for the theme, as the paper plate would be dodging food and drink items while collecting friends to escape the diner. I worked on designing food enemies.",
+            "details": ["This is the first game I built! I participated in the 2024 utGDDC Fall Game Jam where the theme was \"one-time use\". When brainstorming ideas, my team of 4 focused on working that theme into our main character, a disposable paper plate. A bullet hell game seemed fitting for the theme, as the paper plate would be dodging food and drink items while collecting friends to escape the diner. I worked on designing food enemies.",
                 "The first enemy I designed was a delayed seeker. It moves to a players previous location after a short delay. After three movements, it exploes and damages the player if they get caught in its vicnity. This enemy encourages the player to move to new locations. The second enemy I designed is a laser shooter that spawns and stays in the corner of a players screen for a short time, before locking onto a final position and firing.",
                 "Out the 8 submissions to the game jam, our game won second place. I had always thought about pursuing game development as a career but took a detour into machine learning for a bit. This game jam helped me realize that this is something that I wanted to pursue.",
             ],
@@ -56,7 +55,7 @@ export const Projects = () => {
         {
             "title": "Neom",
             "image": NeomImg,
-            "description": "Agentic digital audio workstation that uses AI to help producers create music",
+            "description": "Agentic digital audio workstation that uses AI to help producers create music.",
             "link": "https://devpost.com/software/neom",
             "details": ["My first time at Hack the North was in 2022, when I only had one year of programming experience. Needless to say, the project I built was not very functional but I had a great time. I am extremely grateful for the second chance to attend Hack the North in 2025 where I was able to contribute to a more polished project.",
                 "I worked with 3 other teammates to build an AI-powered digital audio workstation that would help make music production more accessible to beginners. I set up the backend database on Microsoft Azure and connected it to the frontend. I also worked on implementing a save projects feature for users to save their work.",
