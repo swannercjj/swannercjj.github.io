@@ -96,7 +96,7 @@
 }
 
 .details {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text);
   line-height: 1.5;
 }
@@ -130,5 +130,17 @@
 
   .panelContent {
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description,
+  .details,
+  .panelContent {
+    font-size: 1.2rem;
+  }
+
+ .title {
+    font-size: 1.5rem; 
   }
 }
