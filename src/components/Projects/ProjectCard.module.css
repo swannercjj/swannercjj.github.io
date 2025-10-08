@@ -131,6 +131,11 @@
   .panelContent {
     margin-left: 0;
   }
+
+  .details {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
