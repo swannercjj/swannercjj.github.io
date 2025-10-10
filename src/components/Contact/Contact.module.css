@@ -3,6 +3,8 @@
 .container {
     position: relative;
     display: flex;
+    justify-content: center;  
+    align-items: center;
     z-index: 1;
     margin: 0 12% 48px 12%;
 }
@@ -11,6 +13,8 @@
     display: flex;
     gap: 36px;
     list-style: none;
+    justify-content: center;  
+    align-items: center;
 }
 
 .linkItem {
