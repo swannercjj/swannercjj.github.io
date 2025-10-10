@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ProjectCard.module.css";
 
 export const ProjectCard = ({ project, defaultOpen = false }) => {
-  const { title, image, description, link, details } = project;
+  const { title, image, caption, description, link, details } = project;
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
@@ -25,9 +25,10 @@ export const ProjectCard = ({ project, defaultOpen = false }) => {
 
       <div className={`${styles.panel} ${isOpen ? styles.open : ""}`}>
         <div className={styles.panelContent}>
-          {image && (
-            <img src={image} alt={title} className={styles.image} />
-          )}
+            <figure className={styles.figure}>
+              <img src={image} alt={title} className={styles.image} />
+              {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+            </figure>
           {link && (
             <a
               href={link}

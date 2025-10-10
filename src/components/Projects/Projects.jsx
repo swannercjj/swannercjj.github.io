@@ -15,6 +15,7 @@ export const Projects = () => {
         {
             "title": "Fitting In",
             "image": FittingInImg,
+            "caption": "Titlecard Art Credits: Ivan Mora",
             "description": "Multiplayer game where tiny ailens need to pilot a \"human\" spaceship as a disguise.",
             "link": "https://tycelm.itch.io/fitting-in",
             "details": ["Although this game is as course project (UofT CSC404), it has been a valuable experience so far. Our class had the chance to partner with the Faculty of Music as well as the Art and Animation Program at Centennial College to build a fully fleshed out game in one semester.", 
@@ -26,6 +27,7 @@ export const Projects = () => {
         {
             "title": "Paper Plate Paranoia",
             "image": PaperPlateParanoiaImg,
+            "caption": "Art Credits: Joshua Li",
             "description": "Bullet hell game where paper plate must collect friends and escape the diner.",
             "link": "https://jason121301.itch.io/paper-plate-paranoia",
             "details": ["This is the first game I built! I participated in the 2024 utGDDC Fall Game Jam where the theme was \"one-time use\". When brainstorming ideas, my team of 4 focused on working that theme into our main character, a disposable paper plate. A bullet hell game seemed fitting for the theme, as the paper plate would be dodging food and drink items while collecting friends to escape the diner. I worked on designing food enemies.",
@@ -36,6 +38,7 @@ export const Projects = () => {
         {
             "title": "Disbanded",
             "image": DisbandedImg,
+            "caption": "Titlecard Art Credits: Jessica Chen",
             "description": "First person shooter rhythm game made for Game making Detahmatch 2024/25.",
             "link": "https://recnats.itch.io/disbanded",
             "details": ["I have a lot of programming experience so I was thrilled to see the other side of game design through art and music. My roles in this project was as 3D artist, animator, and sound designer.",
@@ -55,6 +58,7 @@ export const Projects = () => {
         {
             "title": "Neom",
             "image": NeomImg,
+            "caption": "Thumbnail Art Credits: Jessica Chen",
             "description": "Agentic digital audio workstation that uses AI to help producers create music.",
             "link": "https://devpost.com/software/neom",
             "details": ["My first time at Hack the North was in 2022, when I only had one year of programming experience. Needless to say, the project I built was not very functional but I had a great time. I am extremely grateful for the second chance to attend Hack the North in 2025 where I was able to contribute to a more polished project.",
