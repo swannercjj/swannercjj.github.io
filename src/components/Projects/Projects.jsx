@@ -13,6 +13,10 @@ import NeomImg from "../../assets/projects/neom.png"
 export const Projects = () => {
     const projects = [
         {
+            "title": "Rift Rewind - Heimer Academy",
+            "description": "AI-powered agent to help League of Legends players to improve, submission for Rift Rewind Hackathon 2025."
+        },
+        {
             "title": "Fitting In",
             "image": FittingInImg,
             "caption": "Titlecard Art Credits: Ivan Mora",
