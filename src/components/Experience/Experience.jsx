@@ -13,6 +13,15 @@ export const Experience = () => {
                 iconStyle={{ background: "#fff", color: "#fff" }}
                 date="May 2025 - Aug 2025"
             >
+                <h3 className="vertical-timeline-element-title">Tech Design Intern</h3>
+                <h4 className="vertical-timeline-element-subtitle">Sledgehammer Games (Activision)</h4>
+                <p>Design and program features for a future Call of Duty release with proprietary tools</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className={styles.timelineElement}
+                iconStyle={{ background: "#fff", color: "#fff" }}
+                date="May 2025 - Aug 2025"
+            >
                 <h3 className="vertical-timeline-element-title">AI Engineer</h3>
                 <h4 className="vertical-timeline-element-subtitle">RBC Capital Markets</h4>
                 <p>Applied machine learning for predictive modeling in stock market applications</p>

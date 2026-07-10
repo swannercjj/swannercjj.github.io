@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./Projects.module.css";
 import { ProjectCard } from './ProjectCard';
 
+import RiftRewindImg from "../../assets/projects/rift_rewind.jpeg"
 import FittingInImg from "../../assets/projects/fitting_in.png"
 import PaperPlateParanoiaImg from "../../assets/projects/paper_plate_paranoia.png"
 import DisbandedImg from "../../assets/projects/disbanded.png"
@@ -14,7 +15,14 @@ export const Projects = () => {
     const projects = [
         {
             "title": "Rift Rewind - Heimer Academy",
-            "description": "AI-powered agent to help League of Legends players to improve, submission for Rift Rewind Hackathon 2025."
+            "image": RiftRewindImg,
+            "description": "AI-powered coaching platform to help League of Legends players improve, 1st place at the Rift Rewind Hackathon 2025.",
+            "link": "https://www.heimer-academy.ca/",
+            "details": [
+                "This project was built for the Rift Rewind Hackathon 2025, a hackathon hosted by Riot Games and AWS focused on building tools to help League of Legends players improve. I worked with 3 other teammates to build Heimer Academy, a personalized coaching platform that analyzes a player's gameplay and delivers actionable feedback, match analytics, and champion recommendations tailored to their playstyle. With over 170 champions and hundreds of abilities to learn, our goal was to ease that learning curve with feedback that felt personal rather than another generic stats dashboard.",
+                "I worked on the backend, primarily focusing on the model that gives champion recommendations. I built a system that scraped thousands of summoner profiles and built a co-occurrence graph to find champions frequently played by the same players. The model then ranks recommendations by co-occurrence along with recent performance data, so a Zed player who wants to branch out might be pointed toward Talon. This grounded the suggestions in real player behaviour instead of theoretical similarity. The backend was built with Python and FastAPI, pulling live data from the Riot Games and Data Dragon APIs.",
+                "We placed 1st at the hackathon, making this my first hackathon win. It was a great experience and I learned a lot about building recommendation systems, working with graph data at scale, and turning messy real-world game data into something genuinely useful for players."
+            ],
         },
         {
             "title": "Fitting In",
@@ -26,7 +34,7 @@ export const Projects = () => {
                 "Developed as part of the University of Toronto CSC404 course, Fitting In was a semester-long collaboration with the Faculty of Music and the Art and Animation Program at Centennial College. The goal was to create a complete, playable game that brought together students across disciplines to explore game, art, and audio design.", 
                 "I worked on various aspects of the game, including designing the mechanics, level tasks, and implementing the gameplay. I gave my input on the art style and overall theme of the game as well. This project has been a great opportunity to collaborate with people from different disciplines and learn how to integrate various elements into a cohesive game experience.",
                 "One of the primary focuses is designing systems and specific level tasks that encourage player interaction and cooperation. A challenge we face is that since this game is designed to be multiplayer, we want to make sure that cooperation is necessary and engage all players. An example is that for operating the robot arm, there are controls that are given to a different terminal and players in different locations must coordinate to utilize it effectively.",
-                "I am also the project manager, organizing meetings and communicating effectively to relay messages from the course coordinator to our team. This game is still in development and should be finished around the end of November 2025. We have had great feedback from global industry professionals, and the experience has been amazing and it is exciting to see how the features I implemented and designed come to life.",
+                "I am also the project manager, organizing meetings and communicating effectively to relay messages from the course coordinator to our team. We presented our game at the Level Up Showcase held during April 2026 and had great feedback from global industry professionals, and the experience has been amazing and it is exciting to see how the features I implemented and designed come to life.",
             ],
         },
         {
