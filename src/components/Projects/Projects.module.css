@@ -2,20 +2,14 @@
 
 .container {
     position: relative;
-    border-radius: 32px;
-    padding: 72px;
+    padding: 0;
     margin: 128px 12% 48px 12%;
     z-index: 1;
-    background-image: 
-    linear-gradient(
-        135deg,
-        rgba(61, 57, 171, 0.2) 20%,
-        rgba(61, 57, 171, 0.4) 70%
-    );
     color: var(--color-text);
 }
 
 .title {
+    font-family: var(--font-header);
     font-size: 48px;
     font-weight: 700px;
     letter-spacing: 1.75px;
@@ -32,14 +26,11 @@
 }
 
 
-.projects {
+.grid {
     margin-top: 36px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+    gap: 24px;
     width: 100%;
 }
 

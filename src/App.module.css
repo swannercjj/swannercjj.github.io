@@ -8,28 +8,3 @@
     padding: 16px 0;
     overflow: hidden;
 }
-
-.backgroundBlur {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    border-radius: 240px;
-    background-color: rgba(57, 78, 171, 0.4);
-    filter: blur(200px);
-    z-index: 0;
-    pointer-events: none;
-}
-
-@media screen and (max-width: 830px) {
-    .backgroundBlur {
-        width: 80%;
-        height: 95%;
-        border-radius: 60px;
-        background-color: rgba(57, 78, 171, 0.6);
-        filter: blur(100px);
-    }
-}
-

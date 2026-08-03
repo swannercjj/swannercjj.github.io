@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./Projects.module.css";
 import { ProjectCard } from './ProjectCard';
+import { ProjectModal } from './ProjectModal';
 
 import RiftRewindImg from "../../assets/projects/rift_rewind.jpeg"
 import FittingInImg from "../../assets/projects/fitting_in.png"
@@ -12,6 +13,8 @@ import NeomImg from "../../assets/projects/neom.png"
 
 
 export const Projects = () => {
+    const [selected, setSelected] = useState(null);
+
     const projects = [
         {
             "title": "Rift Rewind - Heimer Academy",
@@ -92,13 +95,14 @@ export const Projects = () => {
     return (
         <section className={styles.container} id="projects">
             <h2 className={styles.title}>Projects</h2>
-            <div className={styles.projects}>
+            <div className={styles.grid}>
                 {
                     projects.map((project, id) => {
-                        return <ProjectCard key={id} project={project} defaultOpen={id < 2}/>
+                        return <ProjectCard key={id} project={project} onOpen={() => setSelected(project)} />
                     })
                 }
             </div>
+            <ProjectModal project={selected} onClose={() => setSelected(null)} />
         </section>
     )
 }

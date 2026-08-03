@@ -4,9 +4,21 @@
     --color-primary: rgb(57, 78, 171);
     --color-secondary: rgb(158, 206, 240);
     --color-accent: rgb(61, 57, 171);
-    --color-bg: rgb(200, 212, 234);
+    --color-bg: #9fbee9;
     --color-dark-text: rgb(52, 53, 58);
     --color-text-secondary: rgb(247, 241, 255);
+
+    /* New palette */
+    --palette-cream: #EEE9E3;
+    --palette-blue: #90ADD6;
+    --palette-yellow: #F5EAB5;
+    --palette-taupe: #AD9C92;
+
+    /* Cards: darker blue fill, yellow text */
+    --color-card-bg: #3B5B87;
+    --color-card-text: #F5EAB5;
+
     /* Fonts */
     --font-robot: "Roboto";
+    --font-header: "Lilita One", cursive;
 }

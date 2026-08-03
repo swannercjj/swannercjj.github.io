@@ -5,9 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 64px;
     z-index: 1;
-    margin: 48px 12%;
-    padding: 0 auto;
+    margin: 96px 12% 48px 12%;
 }
 
 .content {
@@ -19,10 +19,10 @@
 }
 
 .title {
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 900;
-    margin-bottom: 32px;
-    font-family: var(--font-roboto);
+    margin-bottom: 24px;
+    font-family: var(--font-header);
     transition: text-shadow 0.2s ease;
     display: inline-block;
 }
@@ -31,63 +31,71 @@
     text-shadow:
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
-      0 0 15px var(--color-secondary); 
+      0 0 15px var(--color-secondary);
   }
 
 .description {
-    font-size: 32px;
+    font-size: 20px;
     font-family: var(--font-roboto);
-    margin-bottom: 52px;
-    margin-right: 48px;
-    max-width: 1048px;
+    margin-bottom: 24px;
+    max-width: 640px;
 }
 
-.imgContainer {
-    margin: 0 0 52px 0;
-    display: inline-block; 
-}
-
-.profileImg {
-    width: 50%;
-    max-width: 480px;
-    max-height: 480px;
-    border-radius: 50%;
-    object-fit: cover;
-    z-index: 1;
+.about {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: 640px;
 }
 
 .links {
     display: flex;
-    gap: 48px;
+    flex-wrap: wrap;
+    gap: 16px;
     list-style: none;
+    margin-top: 32px;
 }
 
+/* secondary buttons: Resume, GitHub — lighter blue */
 .links a {
-    font-size: 24px;
-    color: var(--color-text);
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 16px;
+    border: 2px solid #7fa0cc;
+    background-color: #5e82b5;
+    color: var(--palette-cream);
+    font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease,
+        color 0.2s ease, border-color 0.2s ease;
 }
 
-.links li {
-    position: relative;
+.links a:hover {
+    background-color: #7093c0;
+    transform: translateY(-2px);
 }
 
-.links li::after {
-    content: "/";
-    position: relative;
-    right: -25px;
-    color: var(--color-text);
-    font-size: 24px;
+/* primary button: Contact Me — boldest */
+.links a.primary {
+    border-color: var(--palette-yellow);
+    background-color: var(--color-card-bg);
+    color: var(--palette-yellow);
+    font-weight: 800;
 }
 
-.links li:last-child::after {
-    content: none;
+.links a.primary:hover {
+    background-color: var(--palette-yellow);
+    color: var(--color-card-bg);
+    transform: translateY(-2px);
 }
 
 
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column-reverse;
+        gap: 32px;
+        text-align: center;
     }
 
     .content {
@@ -95,42 +103,43 @@
     }
 
     .title {
-        font-size: 48px;
+        font-size: 44px;
         margin: 16px 0;
         text-align: center;
     }
 
-    .profileImg {
-        width: 100%;
-        height: 100%;
-        border-radius: 75%;
+    .description {
+        font-size: 20px;
+        margin: 0 0 16px 0;
+        text-align: center;
     }
 
-    .description {
-        font-size: 24px;
-        font-family: var(--font-roboto);
-        margin: 0 0 12px 0;
+    .about {
+        font-size: 15px;
         text-align: center;
     }
 
     .links {
-        gap: 10px;
+        gap: 12px;
+        justify-content: center;
     }
 
     .links a {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 10px 22px;
     }
-
-    .links li::after {
-        font-size: 18px;
-        right: -6px;
-    }
-
 }
 
 
 @media (min-width: 1024px) {
     .container {
-        margin: 128px 16% 48px 16%;
+        justify-content: center;
+        gap: 72px;
+        max-width: 1120px;
+        margin: 112px auto 48px auto;
+    }
+
+    .content {
+        max-width: 560px;
     }
 }

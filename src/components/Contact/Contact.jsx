@@ -31,6 +31,7 @@ export const Contact = () => {
   return (
     <footer id="contact">
       <div className={styles.container}>
+        <h2 className={styles.title}>Contact Me</h2>
         <ul className={styles.linksList}>
             {links.map((link, index) => (
               <li key={link.name}>

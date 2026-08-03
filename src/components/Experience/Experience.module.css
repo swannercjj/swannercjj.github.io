@@ -1,48 +1,256 @@
 @import "../../vars.css";
-@import 'react-vertical-timeline-component/style.min.css';
-
 
 .container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     z-index: 1;
     margin: 48px 12%;
-    padding: 0 auto;
+    padding: 0;
 }
 
 .title {
     color: var(--color-text);
+    font-family: var(--font-header);
     font-size: 48px;
-    font-weight: 700px;
+    font-weight: 700;
     letter-spacing: 1.75px;
     text-transform: uppercase;
     transition: text-shadow 0.2s ease;
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
 
 .title:hover {
     text-shadow:
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
-      0 0 15px var(--color-secondary); 
+      0 0 15px var(--color-secondary);
 }
 
-
-.timelineElement {
-    color: var(--color-dark-text);
+/* Timeline rail */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
 }
 
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 50%;
+    width: 3px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        to bottom,
+        rgba(245, 234, 181, 0),
+        var(--color-secondary) 12%,
+        var(--color-secondary) 88%,
+        rgba(245, 234, 181, 0)
+    );
+    border-radius: 3px;
+}
+
+/* Each row */
+.item {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 16px 0;
+}
+
+.left {
+    left: 0;
+    padding-right: 44px;
+}
+
+.right {
+    left: 50%;
+    padding-left: 44px;
+}
+
+/* Connector dot on the rail */
+.dot {
+    position: absolute;
+    top: 34px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--palette-yellow);
+    border: 3px solid var(--color-card-bg);
+    box-shadow: 0 0 0 3px var(--color-secondary);
+    z-index: 2;
+}
+
+.left .dot {
+    right: -9px;
+}
+
+.right .dot {
+    left: -9px;
+}
+
+/* Card */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 1.25rem;
+    text-align: left;
+    border-radius: 16px;
+    border: 2px solid rgba(245, 234, 181, 0.35);
+    background-color: var(--color-card-bg);
+    color: var(--color-card-text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(20, 30, 48, 0.35);
+    border-color: rgba(245, 234, 181, 0.65);
+}
+
+/* Little arrow pointing toward the rail */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.left .card::before {
+    right: -10px;
+    border-left: 10px solid var(--color-card-bg);
+}
+
+.right .card::before {
+    left: -10px;
+    border-right: 10px solid var(--color-card-bg);
+}
+
+/* Header: logo + role/company */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoWrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    object-fit: cover;
+    transform: scale(1.25);
+}
+
+.monogram {
+    font-family: var(--font-header);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: var(--palette-yellow);
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.role {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--palette-yellow);
+}
+
+.company {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--palette-cream);
+}
+
+.date {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--color-card-bg);
+    background: var(--color-secondary);
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--palette-cream);
+}
+
+@media screen and (min-width: 1024px) {
+    .role {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile: collapse to a single left rail */
 @media screen and (max-width: 830px) {
     .container {
         margin: 48px 8%;
-        padding: 0;
     }
-    
+
     .title {
         font-size: 36px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .item,
+    .left,
+    .right {
+        width: 100%;
+        left: 0;
+        padding-left: 56px;
+        padding-right: 0;
+    }
+
+    .left .dot,
+    .right .dot {
+        left: 12px;
+        right: auto;
+    }
+
+    .left .card::before,
+    .right .card::before {
+        left: -10px;
+        right: auto;
+        border-left: none;
+        border-right: 10px solid var(--color-card-bg);
     }
 }
