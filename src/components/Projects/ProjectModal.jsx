@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import styles from "./ProjectModal.module.css";
 
 export const ProjectModal = ({ project, onClose }) => {
@@ -19,7 +20,7 @@ export const ProjectModal = ({ project, onClose }) => {
 
   const { title, image, caption, link, details } = project;
 
-  return (
+  return createPortal(
     <div className={styles.overlay} onClick={onClose}>
       <div
         className={styles.modal}
@@ -57,6 +58,7 @@ export const ProjectModal = ({ project, onClose }) => {
             </p>
           ))}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

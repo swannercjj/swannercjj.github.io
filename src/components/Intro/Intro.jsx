@@ -10,7 +10,7 @@ export const Intro = () => {
             <p className={styles.description}>I recently finished my undergraduate studies in Computer Science at the University of Toronto. Soon, I will be heading to University of Alberta to pursue my graduate studies supervised by Dr. Michael Bowling.</p>
           <ul className={styles.links}>
               <li>
-                <a className={styles.primary} href="#contact">Contact Me</a>
+                <a className={styles.primary} href="https://www.linkedin.com/in/jessicachen-cjj/">LinkedIn</a>
               </li>
               <li>
                 <a href={"/jessica_chen_resume.pdf"} target="_blank" rel="noopener noreferrer">Resume</a>

@@ -1,53 +1,35 @@
 import React from 'react'
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { IoMail, IoCodeSlashSharp } from "react-icons/io5";
 
 import styles from "./Contact.module.css"
 
 export const Contact = () => {
-  const links = [
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/jessicachen-cjj/",
-      icon: <FaLinkedin />
-    },
-    {
-      name: "Github",
-      href: "https://github.com/swannercjj",
-      icon: <FaGithub />
-    },
-    {
-      name: "Email",
-      href: "mailto:jesschen.cjj@gmail.com",
-      icon: <IoMail />
-    },
-    {
-      name: "Repo",
-      href: "https://github.com/swannercjj/swannercjj.github.io",
-      icon: <IoCodeSlashSharp />
-    }
-  ]
-
   return (
-    <footer id="contact">
-      <div className={styles.container}>
-        <h2 className={styles.title}>Contact Me</h2>
-        <ul className={styles.linksList}>
-            {links.map((link, index) => (
-              <li key={link.name}>
-                <a 
-                  className={styles.linkItem}
-                  key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.icon}
-                </a>
-              </li>
-            ))}
-        </ul>
-      </div>
+    <footer id="contact" className={styles.footer}>
+      <ul className={styles.links}>
+        <li>
+          <a href="mailto:jesschen.cjj@gmail.com">
+            jesschen.cjj@gmail.com
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/swannercjj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jessicachen-cjj/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
     </footer>
   )
 }
