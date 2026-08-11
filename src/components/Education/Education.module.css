@@ -1,0 +1,204 @@
+@import "../../vars.css";
+
+/* Education renders as one of the two columns inside Experience's `.columns`
+   flex row, so it carries its own column sizing + ordering (left side). */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 480px;
+    min-width: 0;
+    max-width: 620px;
+    order: 1;
+}
+
+.colEdu {
+    order: 1;
+}
+
+.title {
+    color: var(--color-text);
+    font-family: var(--font-header);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    transition: text-shadow 0.2s ease;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.title:hover {
+    text-shadow:
+      0 0 5px var(--color-secondary),
+      0 0 10px var(--color-secondary),
+      0 0 15px var(--color-secondary);
+}
+
+/* ---- Single container, straight (non-wavy) dashed rail ---- */
+/* Same card treatment as the experience cards: yellow border, navy fill,
+   and an inset inner border framing the whole block. */
+.eduTimeline {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    padding: 1.75rem;
+    border-radius: 18px;
+    border: 3px solid var(--palette-yellow);
+    background-color: var(--color-exp-card-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.eduTimeline::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    z-index: 3;
+    border: 2px solid var(--palette-yellow);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.eduItems {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+/* One entry: circular logo node on the left + text to the right */
+.eduEntry {
+    position: relative;
+    padding-left: 66px;
+    padding-bottom: 34px;
+}
+
+.eduEntry:last-child {
+    padding-bottom: 0;
+}
+
+/* Dashed connector running down from this node to the next */
+.eduEntry:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 52px;
+    bottom: -22px;
+    border-left: 2px dashed var(--palette-blue);
+    opacity: 0.9;
+}
+
+[data-theme="dark"] .eduEntry:not(:last-child)::before {
+    border-left-color: var(--palette-blue);
+    opacity: 0.4;
+}
+
+/* Circular node that holds the university logo (spot to drop a logo in) */
+.eduNode {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-logo-bg);
+    border: 2px solid var(--color-secondary);
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* University logo inside the node */
+.eduLogo {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    object-fit: cover;
+    transform: scale(1.15);
+}
+
+/* Fallback initials when no logo image is set */
+.eduMonogram {
+    font-family: var(--font-header);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--color-card-bg);
+}
+
+.eduContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 2px;
+}
+
+.eduDate {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--color-secondary);
+}
+
+.eduDegree {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--palette-yellow);
+}
+
+.eduSchool {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--palette-cream);
+    opacity: 1;
+}
+
+/* Bullet points beneath each education entry */
+.eduBullets {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: disc;
+}
+
+.eduBullets li {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: var(--palette-cream);
+    opacity: 0.85;
+}
+
+.phLine {
+    display: block;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--color-text);
+    opacity: 0.22;
+}
+
+.phEduDate { width: 150px; height: 13px; }
+.phEduTitle { width: 82%; height: 22px; opacity: 0.28; }
+.phEduSub { width: 58%; height: 13px; }
+
+@media screen and (min-width: 831px) {
+    .eduTimeline {
+        margin-top: 28px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .column {
+        width: 100%;
+        max-width: 620px;
+        flex-basis: auto;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}

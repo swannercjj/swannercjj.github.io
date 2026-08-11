@@ -1,5 +1,6 @@
 import React, { useState, useRef, useLayoutEffect, useCallback } from 'react'
 import styles from "./Experience.module.css"
+import { Education } from "../Education/Education"
 
 import ShgLogo from "../../assets/experience/shg.png"
 import RbcLogo from "../../assets/experience/rbc.png"
@@ -9,7 +10,7 @@ const experiences = [
     {
         role: "Tech Design Intern",
         company: "Sledgehammer Games (Activision)",
-        date: "May 2025 - Aug 2025",
+        date: "May 2026 - Aug 2026",
         description: "Design and program features for a future Call of Duty release with proprietary tools",
         logo: ShgLogo,
         logoBg: "#283337",
@@ -197,40 +198,48 @@ export const Experience = () => {
 
     return (
         <section className={styles.container} id="experience">
-            <h2 className={styles.title}>Experience</h2>
-            <div className={styles.timeline} ref={timelineRef}>
-                <span className={styles.rail} aria-hidden="true" />
-                <svg
-                    className={styles.curve}
-                    width={curve.w}
-                    height={curve.h}
-                    viewBox={`0 0 ${curve.w} ${curve.h}`}
-                    aria-hidden="true"
-                >
-                    <path className={styles.curvePath} d={curve.d} />
-                    {curve.dots.map((dot, i) => (
-                        <circle key={i} className={styles.curveDot} cx={dot.x} cy={dot.y} r={8} />
-                    ))}
-                </svg>
-                <div className={styles.items} ref={itemsRef}>
-                    {experiences.map((exp, id) => (
-                        <div key={id} className={styles.item}>
-                            <article className={styles.card}>
-                                <div className={styles.header}>
-                                    <div className={styles.logoWrap}>
-                                        <Logo src={exp.logo} alt={exp.company} monogram={exp.monogram} />
-                                    </div>
-                                    <div className={styles.heading}>
-                                        <h3 className={styles.role}>{exp.role}</h3>
-                                        <h4 className={styles.company}>{exp.company}</h4>
-                                    </div>
+            <div className={styles.columns}>
+                {/* Experience column (right) — curved thread through tilted cards */}
+                <div className={`${styles.column} ${styles.colExp}`}>
+                    <h2 className={styles.title}>Experience</h2>
+                    <div className={styles.timeline} ref={timelineRef}>
+                        <span className={styles.rail} aria-hidden="true" />
+                        <svg
+                            className={styles.curve}
+                            width={curve.w}
+                            height={curve.h}
+                            viewBox={`0 0 ${curve.w} ${curve.h}`}
+                            aria-hidden="true"
+                        >
+                            <path className={styles.curvePath} d={curve.d} />
+                            {curve.dots.map((dot, i) => (
+                                <circle key={i} className={styles.curveDot} cx={dot.x} cy={dot.y} r={9} />
+                            ))}
+                        </svg>
+                        <div className={styles.items} ref={itemsRef}>
+                            {experiences.map((exp, id) => (
+                                <div key={id} className={styles.item}>
+                                    <article className={styles.card}>
+                                        <div className={styles.header}>
+                                            <div className={styles.logoWrap}>
+                                                <Logo src={exp.logo} alt={exp.company} monogram={exp.monogram} />
+                                            </div>
+                                            <div className={styles.heading}>
+                                                <h3 className={styles.role}>{exp.role}</h3>
+                                                <h4 className={styles.company}>{exp.company}</h4>
+                                            </div>
+                                        </div>
+                                        <span className={styles.date}>{exp.date}</span>
+                                        <p className={styles.description}>{exp.description}</p>
+                                    </article>
                                 </div>
-                                <span className={styles.date}>{exp.date}</span>
-                                <p className={styles.description}>{exp.description}</p>
-                            </article>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
+
+                {/* Education column (left) — lives in its own component */}
+                <Education />
             </div>
         </section>
     )

@@ -6,9 +6,33 @@
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    margin: 48px 12%;
+    margin: 48px auto;
+    width: 88%;
+    max-width: 1240px;
     padding: 0;
 }
+
+/* Two side-by-side columns: Experience (left) + Education (right) */
+.columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 480px;
+    min-width: 0;
+    max-width: 620px;
+}
+
+/* Education (its own component) takes order: 1 on the left; Experience sits right */
+.colExp { order: 2; }
 
 .title {
     color: var(--color-text);
@@ -47,7 +71,7 @@
     left: 50%;
     width: 0;
     transform: translateX(-50%);
-    border-left: 2px dashed var(--palette-blue);
+    border-left: 2px dashed var(--color-card-bg);
     opacity: 0.7;
     z-index: 0;
 }
@@ -64,18 +88,36 @@
 
 .curvePath {
     fill: none;
-    stroke: var(--palette-blue);
+    stroke: var(--color-card-bg);
     stroke-width: 2;
     stroke-dasharray: 8 9;
     stroke-linecap: round;
     opacity: 0.7;
 }
 
+/* Dark mode: swap to the pale palette blue (which pops against the dark page)
+   and fade it so it reads lighter. Light mode uses the darker card blue above
+   so the rail stays visible against the light-blue page background. */
+[data-theme="dark"] .curvePath {
+    stroke: var(--palette-blue);
+    opacity: 0.4;
+}
+
+[data-theme="dark"] .rail {
+    border-left-color: var(--palette-blue);
+    opacity: 0.4;
+}
+
+/* Line-end markers: a yellow dot with a blue border */
 .curveDot {
-    fill: var(--palette-blue);
+    fill: var(--palette-yellow);
+    stroke: var(--palette-blue);
+    stroke-width: 4;
+    opacity: 1;
+}
+
+[data-theme="dark"] .curveDot {
     stroke: var(--color-secondary);
-    stroke-width: 3;
-    opacity: 0.9;
 }
 
 .rail::before,
@@ -87,8 +129,13 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: var(--palette-blue);
+    background: var(--color-card-bg);
     border: 3px solid var(--color-secondary);
+}
+
+[data-theme="dark"] .rail::before,
+[data-theme="dark"] .rail::after {
+    background: var(--palette-blue);
 }
 
 .rail::before {
@@ -244,8 +291,24 @@
 /* Mobile: gentler offsets so tilted cards don't overflow */
 @media screen and (max-width: 830px) {
     .container {
-        margin: 48px 8%;
+        margin: 48px auto;
+        width: 84%;
     }
+
+    /* Stack the columns, Education first then Experience */
+    .columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 44px;
+    }
+
+    .column {
+        width: 100%;
+        max-width: 620px;
+        flex-basis: auto;
+    }
+
+    .colExp { order: 2; }
 
     .title {
         font-size: 36px;
