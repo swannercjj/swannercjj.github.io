@@ -57,7 +57,7 @@
     .container {
         justify-content: center;
         gap: 72px;
-        max-width: 1680px;
+        max-width: 1024px;
         margin: 112px auto 48px auto;
     }
 }
