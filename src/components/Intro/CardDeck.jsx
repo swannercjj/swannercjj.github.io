@@ -46,7 +46,7 @@ const initialCards = [
 ];
 
 // must clear the swap animation before another can start
-const SWAP_MS = 700;
+const SWAP_MS = 400;
 const AUTO_MS = 7000;
 
 export const CardDeck = () => {
