@@ -1,4 +1,6 @@
 :root {
+    color-scheme: light;
+
     /* Colours */
     --color-text: rgb(255, 255, 255);
     --color-primary: rgb(57, 78, 171);
@@ -18,7 +20,39 @@
     --color-card-bg: #3B5B87;
     --color-card-text: #F5EAB5;
 
+    /* Semantic tokens (theme-aware) */
+    --color-exp-card-bg: #22436A;
+    --color-logo-bg: #ffffff;
+    --color-btn-bg: #5e82b5;
+    --color-btn-border: #7fa0cc;
+    --color-btn-hover: #7093c0;
+    --color-btn-text: var(--palette-cream);
+    --color-footer-text: var(--color-card-bg);
+    --color-toggle: var(--color-text);
+
     /* Fonts */
     --font-robot: "Roboto";
     --font-header: "Lilita One", cursive;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-text: #EEE9E3;
+    --color-secondary: rgb(158, 206, 240);
+    --color-bg: #0d1826;
+
+    /* Cards sit slightly lighter than the page so they lift off it */
+    --color-card-bg: #1b2c46;
+    --color-exp-card-bg: #2f4d78;
+    --color-logo-bg: #EEE9E3;
+
+    /* Dark mode: buttons swap to the lighter palette blue so they pop off
+       the dark page, with dark text for contrast */
+    --color-btn-bg: #90ADD6;
+    --color-btn-border: #b3c8e3;
+    --color-btn-hover: #a5bfe0;
+    --color-btn-text: #0d1826;
+    --color-footer-text: var(--palette-blue);
+    --color-toggle: var(--palette-yellow);
 }

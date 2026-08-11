@@ -61,9 +61,9 @@
     display: inline-block;
     padding: 12px 28px;
     border-radius: 16px;
-    border: 2px solid #7fa0cc;
-    background-color: #5e82b5;
-    color: var(--palette-cream);
+    border: 2px solid var(--color-btn-border);
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
@@ -72,14 +72,14 @@
 }
 
 .links a:hover {
-    background-color: #7093c0;
+    background-color: var(--color-btn-hover);
     transform: translateY(-2px);
 }
 
 /* primary button: Contact Me — boldest */
 .links a.primary {
     border-color: var(--palette-yellow);
-    background-color: var(--color-card-bg);
+    background-color: var(--color-exp-card-bg);
     color: var(--palette-yellow);
     font-weight: 800;
 }

@@ -47,7 +47,7 @@
     left: 50%;
     width: 0;
     transform: translateX(-50%);
-    border-left: 2px dashed var(--color-card-bg);
+    border-left: 2px dashed var(--palette-blue);
     opacity: 0.7;
     z-index: 0;
 }
@@ -64,7 +64,7 @@
 
 .curvePath {
     fill: none;
-    stroke: var(--color-card-bg);
+    stroke: var(--palette-blue);
     stroke-width: 2;
     stroke-dasharray: 8 9;
     stroke-linecap: round;
@@ -72,7 +72,7 @@
 }
 
 .curveDot {
-    fill: var(--color-card-bg);
+    fill: var(--palette-blue);
     stroke: var(--color-secondary);
     stroke-width: 3;
     opacity: 0.9;
@@ -87,7 +87,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: var(--color-card-bg);
+    background: var(--palette-blue);
     border: 3px solid var(--color-secondary);
 }
 
@@ -137,9 +137,10 @@
     text-align: left;
     border-radius: 18px;
     border: 3px solid var(--palette-yellow);
-    background-color: #22436A;
+    background-color: var(--color-exp-card-bg);
     color: var(--color-card-text);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+        background-color 0.3s ease, color 0.3s ease;
 }
 
 /* inset inner border framing the card (matches the intro image cards) */
@@ -173,7 +174,7 @@
     width: 48px;
     height: 48px;
     border-radius: 10px;
-    background: #ffffff;
+    background: var(--color-logo-bg);
     overflow: hidden;
 }
 

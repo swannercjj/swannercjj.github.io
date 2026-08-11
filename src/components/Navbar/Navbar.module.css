@@ -24,6 +24,36 @@
 
 .menu {
     display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    order: 1;
+}
+
+.themeToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-toggle);
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.themeToggle:hover {
+    background: rgba(127, 160, 204, 0.25);
+    transform: scale(1.08);
 }
 
 .menuItems {
@@ -58,6 +88,14 @@ a:hover {
         align-items: flex-end;
         gap: 10px;
         z-index: 3;
+    }
+
+    .bar {
+        order: 0;
+    }
+
+    .menuItems {
+        order: 1;
     }
 
     .menuBtn {
