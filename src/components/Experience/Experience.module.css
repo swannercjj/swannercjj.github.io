@@ -12,28 +12,6 @@
     padding: 0;
 }
 
-/* Two side-by-side columns: Experience (left) + Education (right) */
-.columns {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 480px;
-    min-width: 0;
-    max-width: 620px;
-}
-
-/* Education (its own component) takes order: 1 on the left; Experience sits right */
-.colExp { order: 2; }
-
 .title {
     color: var(--color-text);
     font-family: var(--font-header);
@@ -89,18 +67,14 @@
 .curvePath {
     fill: none;
     stroke: var(--color-card-bg);
-    stroke-width: 2;
+    stroke-width: 3;
     stroke-dasharray: 8 9;
     stroke-linecap: round;
     opacity: 0.7;
 }
 
-/* Dark mode: swap to the pale palette blue (which pops against the dark page)
-   and fade it so it reads lighter. Light mode uses the darker card blue above
-   so the rail stays visible against the light-blue page background. */
 [data-theme="dark"] .curvePath {
-    stroke: var(--palette-blue);
-    opacity: 0.4;
+    stroke: var(--palette-yellow);
 }
 
 [data-theme="dark"] .rail {
@@ -108,16 +82,15 @@
     opacity: 0.4;
 }
 
-/* Line-end markers: a yellow dot with a blue border */
 .curveDot {
-    fill: var(--palette-yellow);
-    stroke: var(--palette-blue);
+    fill: var(--color-bg);
+    stroke: var(--color-card-bg);
     stroke-width: 4;
     opacity: 1;
 }
 
 [data-theme="dark"] .curveDot {
-    stroke: var(--color-secondary);
+    stroke: var(--palette-yellow);
 }
 
 .rail::before,
@@ -294,21 +267,6 @@
         margin: 48px auto;
         width: 84%;
     }
-
-    /* Stack the columns, Education first then Experience */
-    .columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 44px;
-    }
-
-    .column {
-        width: 100%;
-        max-width: 620px;
-        flex-basis: auto;
-    }
-
-    .colExp { order: 2; }
 
     .title {
         font-size: 36px;

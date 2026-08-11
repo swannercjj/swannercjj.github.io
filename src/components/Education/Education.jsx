@@ -42,7 +42,7 @@ const EduLogo = ({ src, alt, monogram }) => {
 
 export const Education = () => {
     return (
-        <div className={`${styles.column} ${styles.colEdu}`}>
+        <section className={styles.container} id="education">
             <h2 className={styles.title}>Education</h2>
             <div className={styles.eduTimeline}>
                 <div className={styles.eduItems}>
@@ -69,6 +69,6 @@ export const Education = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
