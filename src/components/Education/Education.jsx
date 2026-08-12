@@ -26,7 +26,7 @@ const education = [
     },
 ]
 
-const EduLogo = ({ src, alt, monogram }) => {
+const EduLogo = ({ src, alt }) => {
     const [failed, setFailed] = useState(false)
 
     return (
@@ -49,7 +49,7 @@ export const Education = () => {
                     {education.map((edu, i) => (
                         <div key={i} className={styles.eduEntry}>
                             <span className={styles.eduNode}>
-                                <EduLogo src={edu.logo} alt={edu.school} monogram={edu.monogram} />
+                                <EduLogo src={edu.logo} alt={edu.school} />
                             </span>
                             {(
                                 <div className={styles.eduContent}>
