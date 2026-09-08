@@ -85,8 +85,8 @@
 }
 
 .links a.primary:hover {
-    background-color: var(--palette-yellow);
-    color: var(--color-card-bg);
+    background-color: var(--color-card-bg);
+    /* color: var(--color-card-bg); */
     transform: translateY(-2px);
 }
 

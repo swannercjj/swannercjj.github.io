@@ -71,6 +71,15 @@
 }
 
 .more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.details {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--palette-yellow);
@@ -78,8 +87,30 @@
   transition: opacity 0.2s ease;
 }
 
-.card:hover .more {
+.card:hover .details {
   opacity: 1;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-toggle);
+    font-size: 22px;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.link:hover {
+  filter: drop-shadow(0 0 2px var(--color-secondary));
+  filter: drop-shadow(0 0 4px var(--color-secondary));
+
 }
 
 @media screen and (min-width: 1024px) {

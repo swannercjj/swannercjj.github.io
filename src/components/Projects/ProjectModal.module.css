@@ -74,17 +74,28 @@
 }
 
 .link {
-  display: inline-block;
-  margin-bottom: 1rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--palette-yellow);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  background: transparent;
+  border: 2px solid var(--palette-yellow);
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .link:hover {
-  border-color: var(--palette-yellow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(20, 30, 48, 0.35);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--palette-yellow);
+  outline-offset: 2px;
 }
 
 .details {

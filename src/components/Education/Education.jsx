@@ -21,6 +21,9 @@ const education = [
         bullets: [
             "High Disctinction w/ focus in AI, minor in Mathematics, minor in Statistical Science",
             "NSERC Undergraduate Student Research Award",
+            "Konrad Group Women in Technology Scholarship",
+            "Ubisoft Award in Video Game Design",
+            "Department of Computer Science Engagement Award",
             "VP Academics of UTMIST",
         ] 
     },

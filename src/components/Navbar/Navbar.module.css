@@ -16,6 +16,7 @@
     font-weight: 600;
     text-decoration: none;
     color: var(--color-text);
+    transition: text-shadow 0.2s ease;
 }
 
 .menuBtn {
@@ -66,9 +67,11 @@
     font-size: 24px;
     color: var(--color-text);
     text-decoration: none;
+    transition: text-shadow 0.2s ease;
 }
 
-a:hover {
+.menuItems a:hover,
+.title:hover {
     text-shadow:
       0 0 5px var(--color-secondary),
       0 0 10px var(--color-secondary),
